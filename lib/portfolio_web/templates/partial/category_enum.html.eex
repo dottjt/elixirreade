@@ -1,0 +1,9 @@
+<div class="categories__container">
+
+    <%= Enum.map(@categories, fn(category) -> %>
+        <div class="categories__container__inner">
+            <%= render_partial "project_enum.html", %{projects: @category.projects, conn: @conn} %>
+        </div>
+    <% end) %>
+
+</div>

@@ -40,6 +40,11 @@ defmodule PortfolioWeb do
       import PortfolioWeb.Router.Helpers
       import PortfolioWeb.ErrorHelpers
       import PortfolioWeb.Gettext
+
+      def render_partial(template, assigns \\ []) do
+        render(PortfolioWeb.PartialView, template, assigns)
+      end
+
     end
   end
 

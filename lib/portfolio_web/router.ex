@@ -16,7 +16,23 @@ defmodule PortfolioWeb.Router do
   scope "/", PortfolioWeb do
     pipe_through :browser # Use the default browser stack
 
+    # generic routes
+
     get "/", PageController, :index
+  
+    get "/:category", PageController, :category 
+    get "/:category/:project", PageController, :project 
+    get "/:category/:project/:item", PageControlller :item 
+
+  end
+
+  scope "/admin", PortfolioWeb do 
+    
+    resources "/projects", ProjectController
+    resources "/items", ItemController
+    resources "/categories", CategoryController
+    resources "/tags", TagController
+
   end
 
   # Other scopes may use custom stacks.

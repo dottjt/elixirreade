@@ -20,7 +20,10 @@ exports.config = {
       // }
     },
     stylesheets: {
-      joinTo: "css/app.css"
+      joinTo: "css/app.css",
+      order: {
+        after: ["priv/static/css/app.scss"]
+      }
     },
     templates: {
       joinTo: "js/app.js"
@@ -32,6 +35,13 @@ exports.config = {
     // By default, we set this to "/assets/static". Files in this directory
     // will be copied to `paths.public`, which is "priv/static" by default.
     assets: /^(static)/
+  },
+  sass: {
+    precision: 8
+  },
+  cleancss: {
+    keepSpecialComments: 0,
+    removeEmpty: true
   },
 
   // Phoenix paths configuration
