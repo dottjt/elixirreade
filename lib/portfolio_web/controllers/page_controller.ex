@@ -11,6 +11,7 @@ defmodule PortfolioWeb.PageController do
 
   def category(conn, %{"category" => category }) do
     case category do 
+      
       "about" ->
         render conn, "about.html"
 

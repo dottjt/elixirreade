@@ -1,11 +1,6 @@
-<div class="categories__project__container">
+<%= Enum.map(@projects, fn(project) -> %>
+    <div class="fl w-100 w-third-ns pa2">
+        <h3><%= project.display_name %></h3>
 
-    <%= Enum.map(@projects, fn(project) -> %>
-        <div class="project__container">
-            <h3><%= project.display_name %></h3>
-
-        </div>
-
-    <% end) %>
-
-</div>
+    </div>
+<% end) %>

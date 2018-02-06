@@ -1,3 +1,10 @@
-<div class="about__page">
-  
+<div class="">
+    <h1 class="f-headline lh-title">About</h1>
+
+    <p>My name is Julius.</p>
+    <p>I'm obsessed with programming.</p>
+    <p>I'm really good with Elm, Elixir and React.</p>
+    <p>Although I've built a wide variety of things utilising a number of different frameworks and languages, so I consider myself somewhat of a polygot programmer.</p>
+    <p>Regards,</p>
+    <p>Julius</p>
 </div>

@@ -1,11 +1,8 @@
-<div class="categories__container">
+<%= Enum.map(@categories, fn(category) -> %>
+    <div class="cf ph2-ns">
 
-    <%= Enum.map(@categories, fn(category) -> %>
-        <div class="categories__container__inner">
-            <h2><%= category.display_name %></h2>
+        <h2><%= category.display_name %></h2>
 
-            <%= render_partial "project_enum.html", %{projects: category.projects, conn: @conn} %>
-        </div>
-    <% end) %>
-
-</div>
+        <%= render_partial "project_enum.html", %{projects: category.projects, conn: @conn} %>
+    </div>
+<% end) %>

@@ -120,7 +120,15 @@ defmodule Portfolio.Core do
 
 
   def list_categories_with_projects do
-    Repo.all(Category) |> Repo.preload(:projects)
+    # Repo.all(Category) |> Repo.preload(:projects)
+
+    Repo.all from category in Category,
+        left_join: projects in assoc(category, :projects),
+        left_join: items in assoc(projects, :items),
+        preload: [projects: {projects, items: items}]
+    
+    #  this will load Categories > Projects > Items 
+    #  perhaps this is a bit too much, we will wait and see :)
   end
 
   

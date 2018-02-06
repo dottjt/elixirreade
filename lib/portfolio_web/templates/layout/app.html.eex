@@ -7,16 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Portfolio!</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+
+    <title>Julius Reade!</title>
+    
   </head>
 
   <body>
-    <div class="container">
+    <%= render_partial "header.html", assigns %>
 
-      <%= render @view_module, @view_template, assigns %>
-
+    <div class="mw9 center ph3-ns">
+        <%= render @view_module, @view_template, assigns %>
     </div> <!-- /container -->
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

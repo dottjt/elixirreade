@@ -7,6 +7,7 @@ defmodule Portfolio.Repo.Migrations.CreateProjects do
       add :name, :string
       add :display_name, :string
       add :excerpt, :string
+      add :description, :string
       add :featured_image, :string
       add :category_id, references(:categories, on_delete: :nothing, type: :binary_id)
 
