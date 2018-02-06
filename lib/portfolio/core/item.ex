@@ -2,6 +2,7 @@ defmodule Portfolio.Core.Item do
   use Ecto.Schema
   import Ecto.Changeset
   alias Portfolio.Core.Item
+  alias Portfolio.Core.Project
 
 
   @primary_key {:id, :binary_id, autogenerate: true}
@@ -11,7 +12,9 @@ defmodule Portfolio.Core.Item do
     field :excerpt, :string
     field :featured_image, :string
     field :name, :string
-    field :project_id, :binary_id
+
+    # field :project_id, :binary_id
+    belongs_to :project, Project
 
     timestamps()
   end

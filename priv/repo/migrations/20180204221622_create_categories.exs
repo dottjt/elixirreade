@@ -6,8 +6,7 @@ defmodule Portfolio.Repo.Migrations.CreateCategories do
       add :id, :binary_id, primary_key: true
       add :name, :string
       add :display_name, :string
-      add :excerpt, :string
-      add :featured_image, :string
+      add :description, :string
 
       timestamps()
     end

@@ -2,7 +2,7 @@
 
     <%= Enum.map(@projects, fn(project) -> %>
         <div class="project__container">
-
+            <h3><%= project.display_name %></h3>
 
         </div>
 

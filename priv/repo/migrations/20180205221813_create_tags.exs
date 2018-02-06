@@ -8,6 +8,7 @@ defmodule Portfolio.Repo.Migrations.CreateTags do
       add :display_name, :string
       add :featured_image, :string
       add :excerpt, :string
+      
       add :project_id, references(:projects, on_delete: :nothing, type: :binary_id)
       add :item_id, references(:items, on_delete: :nothing, type: :binary_id)
 

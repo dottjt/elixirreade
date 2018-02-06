@@ -25,3 +25,15 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: Portfolio.Coherence.User,
+  repo: Portfolio.Repo,
+  module: Portfolio,
+  web_module: PortfolioWeb,
+  router: PortfolioWeb.Router,
+  messages_backend: PortfolioWeb.Coherence.Messages,
+  logged_out_url: "/",
+  opts: [:authenticatable]
+# %% End Coherence Configuration %%

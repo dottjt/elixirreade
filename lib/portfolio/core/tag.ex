@@ -11,8 +11,12 @@ defmodule Portfolio.Core.Tag do
     field :excerpt, :string
     field :featured_image, :string
     field :name, :string
-    field :project_id, :binary_id
-    field :item_id, :binary_id
+
+    # field :item_id, :binary_id
+    # field :project_id, :binary_id
+    
+    belongs_to :item, Item # this might potentially be incorrect, might need to be many_to_many
+    belongs_to :project, Project # this might potentially be incorrect, might need to be many_to_many
 
     timestamps()
   end

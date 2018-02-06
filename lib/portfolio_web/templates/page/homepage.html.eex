@@ -1,0 +1,8 @@
+<div class="homepage__page">
+
+    <p>hi my name is julius and I make things.</p>
+
+    
+    <%= render_partial "category_enum.html", %{categories: @categories, conn: @conn} %>
+
+</div>

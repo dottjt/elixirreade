@@ -3,10 +3,10 @@ defmodule PortfolioWeb.PageController do
 
   alias Portfolio.Core
 
-  def index(conn, _params) do
-    categories_with_projects = Core.list_categories_with_projects()
+  def homepage(conn, _params) do
+    categories = Core.list_categories_with_projects()
 
-    render conn, "index.html", categories_with_projects: categories_with_projects
+    render conn, "homepage.html", categories: categories
   end
 
   def category(conn, %{"category" => category }) do
@@ -25,7 +25,7 @@ defmodule PortfolioWeb.PageController do
 
 
   def project(conn, %{"category" => category, "project" => project}) do
-    project = get_project_name!(project)
+    project = Core.get_project_name!(project)
 
     render conn, "project.html", project: project
   end
@@ -33,7 +33,7 @@ defmodule PortfolioWeb.PageController do
   
 
   def item(conn, %{"category" => category, "project" => project, "item" => item}) do
-    item = get_item_name!(project)
+    item = Core.get_item_name!(project)
     
     render conn, "item.html"
   end
