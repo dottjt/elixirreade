@@ -1,12 +1,38 @@
 <div class="page">
   <div class="content">
-    <h1>hire me.</h1>
+    <h1>私を雇う hire me.</h1>
+    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>
+    
+    <p>My name is Julius.</p>
+    <p>I'm a very passionate programmer.</p>
+    <p>I primarily build websites and applications, and I love absolutely all aspects of design and computer science.</p>
+    <p>I adore functional composition, and I'm particularly adept at writing Phoneix Framework/Elixir applications and Elm applications.</p>
+    <p>You may also look at my list of personal <a class="page__link" href="<%= page_path(@conn, :category, "programming") %>">programming projects</a> to get a better sense of my talents.</p>
 
-    <p>I'm available to work as a programmer.</p>
-    <p>Well, I'm technically a better writer than I am a programmer, however that's only because I've been doing it longer.</p>
-    <p>Not to mention, writing doesn't pay as well as programming does - hence why I'm a programmer.</p>
-    <p>I'm a super, crazy fanatic programmer.</p>
-    <p>It's basically all I do with my spare time, so if that appeals to you then you should totally hire me.</p>
+    <h2 class="">strengths.</h2>
+    <ul>
+      <li>MVC Frameworks (C#/ASP.NET, PHP/Laravel, Elixir/Phoenix Framework)</li>
+      <li>Single Page Applications (Angular, React, Vue, Elm)</li>
+      <li>Strong Functional Programming Experience (Clojure, Elm, Elixir)</li>
+      <li>Low Level Concepts (x86 Assembly, C)</li>
+      <li>Advanced Database Design</li>
+      <li>Unix Server Setup / Bash Automation</li>
+      <li>Static Websites</li>
+      <li>Wordpress Builds</li>
+    </ul>
+
+    <h2 class="">weaknesses.</h2>
+    <ul>
+      <li>Complex CSS Animations/Image Resizing</li>
+      <li>Limited C#/Java Experience</li>
+      <li>Limited Windows Experience</li>
+      <li>Limited Unit Testing Experience</li>      
+      <li>No mobile development experience</li>      
+      <li>No Agile Experience</li>
+    </ul>
+
+    <p>If you would like to consider me for your development team, feel free to get in <a class="page__link" href="<%= page_path(@conn, :contact) %>">contact</a> with me.</p>
+
     <p>Regards,</p>
     <p>Julius</p>
   </div>

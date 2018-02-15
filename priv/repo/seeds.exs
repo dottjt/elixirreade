@@ -32,34 +32,32 @@ User.changeset(%User{}, %{name: "Julius Reade", email: "julius.reade@gmail.com",
 programming = Ecto.Changeset.change(%Category{
     name: "programming",
     display_name: "Programming",
-    description: "What I spend most my time doing.",
+    description: "My life passion.",
 })
 
 writing = Ecto.Changeset.change(%Category{
     name: "writing",
     display_name: "Writing",
-    description: "Delicious.",
+    description: "Delicieux, mon petit garçon.",
 })
 
 youtube = Ecto.Changeset.change(%Category{
     name: "youtube",
     display_name: "Youtube",
-    description: "Growing up I very desperately wanted to be a YouTube star.",
+    description: "I wanted to become a YouTube star.",
 })
 
 podcast = Ecto.Changeset.change(%Category{
     name: "podcast",
     display_name: "Podcast",
-    description: "I used to create podcasts with my eyes.",
+    description: "I used to create podcasts.",
 })
 
 radio = Ecto.Changeset.change(%Category{
     name: "radio",
     display_name: "Radio",
-    description: "I also wanted to work in radio and become a shock-jock.",
+    description: "I also wanted to work in radio.",
 })
-
-
 
 
 
@@ -68,8 +66,8 @@ radio = Ecto.Changeset.change(%Category{
 
 awful_cms = Ecto.Changeset.change(%Project{
     name: "awful-cms",
-    display_name: "Awful CMS",
-    excerpt: "The automated structure that brings Awful Manager and Awful Affiliate together.",
+    display_name: "ひどい Awful CMS",
+    excerpt: "bash. unix. ubuntu.",
     description: "I would describe Awful CMS as a combination of the 8,000 billion bash scripts that 
     helps power Awful Manager to generate my collection of Awful Affiliate websites. It has scripts to 
     destroy, create and update these websites from a cache of files, both in production
@@ -77,7 +75,7 @@ awful_cms = Ecto.Changeset.change(%Project{
     ",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
-    link: "",
+    link: "https://github.com/dottjt/awful-cms",
     start_date: ~N[2017-01-01 23:00:07],
     end_date: ~N[2018-01-01 23:00:07],
     tags: [],
@@ -85,8 +83,8 @@ awful_cms = Ecto.Changeset.change(%Project{
 
 awful_manager = Ecto.Changeset.change(%Project{
     name: "awful-manager",
-    display_name: "Awful Manager",
-    excerpt: "An online platform that manages all the Awful Affiliate websites.",
+    display_name: "ひどい Awful Manager",
+    excerpt: "elixir. phoenix. elm.",
     description: "This piece of software is an absolute beast. It is basically the GUI backend for
     Awful CMS. It allows me to update the content of all my Awful Affiliate websites from the one domain, 
     as well as easily manage production and development environments. Not to mention, 
@@ -94,7 +92,7 @@ awful_manager = Ecto.Changeset.change(%Project{
     ",
     featured_image: "",
     background_image: "images/cool/coolb.jpg",
-    link: "",
+    link: "https://github.com/dottjt/awful-cms",
     start_date: ~N[2017-01-01 23:00:07],
     end_date: ~N[2018-01-01 23:00:07],
     tags: [],
@@ -102,15 +100,15 @@ awful_manager = Ecto.Changeset.change(%Project{
 
 awful_affiliate = Ecto.Changeset.change(%Project{
     name: "awful-affiliate",
-    display_name: "Awful Affiliate",
-    excerpt: "The Awful Affiliate website. This wonderful brand I've created.",
+    display_name: "ひどい Awful Affiliate",
+    excerpt: "elixir. phoenix. elm.",
     description: "Awful Affiliate is the website template I use for all my affiliate websites.
     It is a fully functioning Phoenix Framework application, allowing you 
     to create products, updates, tags, categories - and whatever the hell you want. 
     ",
     featured_image: "",
     background_image: "images/cool/coolc.jpg",
-    link: "",
+    link: "https://github.com/dottjt/awful-cms",
     start_date: ~N[2017-01-01 23:00:07],
     end_date: ~N[2018-01-01 23:00:07],
     tags: [],
@@ -119,7 +117,7 @@ awful_affiliate = Ecto.Changeset.change(%Project{
 better_image_reference = Ecto.Changeset.change(%Project{
     name: "better-image-reference",
     display_name: "Better Image Reference",
-    excerpt: "An online image reference application.",
+    excerpt: "elixir. phoenix. elm.",
     description: "This is the first serious application I created with Elixir and Elm.
     It was going to be a very comprehensive image viewer for students learning to draw. 
     Actually, I never ended up finishing it, because I realised that it wouldn't make very much money
@@ -127,7 +125,7 @@ better_image_reference = Ecto.Changeset.change(%Project{
     ",
     featured_image: "",
     background_image: "images/cool/coold.jpg",
-    link: "",
+    link: "", #https://github.com/dottjt/BetterImageReference
     start_date: ~N[2017-01-01 23:00:07],
     end_date: ~N[2017-01-01 23:00:07],
     tags: [],
@@ -136,13 +134,13 @@ better_image_reference = Ecto.Changeset.change(%Project{
 learning_schedule = Ecto.Changeset.change(%Project{
     name: "learning-schedule",
     display_name: "Learning Schedule",
-    excerpt: "My very first full-stack application!",
+    excerpt: "node. react. redux.",
     description: "I had literally zero idea what I was doing - however, it does quite a lot and it was an 
     incredible learning experience.
     ",
     featured_image: "Learning Schedule was the very first full-stack application I ever built!",
     background_image: "images/cool/coole.jpg",
-    link: "",
+    link: "", #https://github.com/dottjt/LearningSchedule
     start_date: ~N[2016-01-01 23:00:07],
     end_date: ~N[2017-01-01 23:00:07],
     tags: [],
@@ -151,14 +149,14 @@ learning_schedule = Ecto.Changeset.change(%Project{
 juliusreadev2 = Ecto.Changeset.change(%Project{
   name: "julius-reade-version-one",
   display_name: "Personal Website",
-  excerpt: "The current version of the website built with",
+  excerpt: "hugo. hugo. hugo.",
   description: "The very first version of this portfolio website. Well, it wasn't
   so much of a portfolio website, rather than a minimalist personal blog I slapped together.
   Still, I thought it looked lovely.  
   ",
   featured_image: "",
   background_image: "images/cool/coolf.jpg",
-  link: "",
+  link: "", #https://github.com/dottjt/elixirreade
   start_date: ~N[2016-01-01 23:00:07],
   end_date: ~N[2016-01-01 23:00:07],
   tags: [],
@@ -167,14 +165,14 @@ juliusreadev2 = Ecto.Changeset.change(%Project{
 juliusreadev1 = Ecto.Changeset.change(%Project{
   name: "julius-reade-version-two",
   display_name: "Personal Website",
-  excerpt: "The first version of the website built with Hugo.",
+  excerpt: "elixir. phoenix. elm.",
   description: "This is the website you're currently looking at. It's built with Phoenix Framework 
   (originally it was going to be with ASP.NET Core, but I believe in self-love) and 
   I think it looks nice. 
   ",
   featured_image: "",
   background_image: "images/cool/coolg.jpg",
-  link: "",
+  link: "", #https://github.com/dottjt/juliusreade
   start_date: ~N[2018-01-01 23:00:07],
   end_date: ~N[2018-01-01 23:00:07],
   tags: [],
@@ -195,8 +193,8 @@ Repo.insert!(programming_with_projects)
 
 juliusreadecom = Ecto.Changeset.change(%Project{
     name: "juliusreade",
-    display_name: "Julius Reade V1",
-    excerpt: "Personal website.",
+    display_name: "Julius Reade",
+    excerpt: "words. words. words.",
     description: "Before my website became *this* it was a blog containing all of the 
     content you see here today.
     ",
@@ -211,11 +209,11 @@ juliusreadecom = Ecto.Changeset.change(%Project{
 medium = Ecto.Changeset.change(%Project{
     name: "medium",
     display_name: "Medium",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "medium. medium. medium.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/cool2.jpg",
-    link: "",
+    link: "", #https://medium.com/@juliusreade
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2017-01-01 23:00:07],
     tags: []
@@ -224,11 +222,11 @@ medium = Ecto.Changeset.change(%Project{
 perspectivetheory = Ecto.Changeset.change(%Project{
     name: "perspective-theory",
     display_name: "Perspective Theory",
-    excerpt: "A mental health website I created.",
-    description: "So, I used to have a lot of mental health issues. And I thought to myself, well, if I write about them then I . Nup. Doesn't work one bit.",
+    excerpt: "wordpress. wordpress. wordpress.",
+    description: "So, I used to have a lot of mental health issues. And I thought to myself, well, if I write about them then maybe I can control them. Nup. Doesn't work one bit. As it turns out, writing and the practice of self-awareness are two very separate and different things.",
     featured_image: "",
     background_image: "images/cool/coola1.jpg",
-    link: "",
+    link: "", #https://medium.com/@juliusreade
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2015-01-01 23:00:07],
     tags: []
@@ -237,11 +235,11 @@ perspectivetheory = Ecto.Changeset.change(%Project{
 elegantlyattached = Ecto.Changeset.change(%Project{
     name: "elegantlyattached",
     display_name: "Elegantly Attached",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "tumblr. tumblr. tumblr.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola2.jpg",
-    link: "",
+    link: "https://elegantlyattached.tumblr.com", # https://elegantlyattached.tumblr.com
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2015-01-01 23:00:07],
     tags: []
@@ -250,11 +248,11 @@ elegantlyattached = Ecto.Changeset.change(%Project{
 brokenheartsandfracturedsmiles = Ecto.Changeset.change(%Project{
     name: "broken-hearts-and-fractured-smiles",
     display_name: "Broken Hearts and Fractured Smiles",
-    excerpt: "Personal blog of sorts.",
+    excerpt: "tumblr. tumblr. tumblr.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola3.jpg",
-    link: "",
+    link: "https://brokenheartsandfracturedsmiles.tumblr.com",
     start_date: ~N[2014-01-01 23:00:07],
     end_date: ~N[2015-01-01 23:00:07],
     tags: []
@@ -263,11 +261,11 @@ brokenheartsandfracturedsmiles = Ecto.Changeset.change(%Project{
 blackwhiteinkcurves = Ecto.Changeset.change(%Project{
     name: "black-white-ink-curves",
     display_name: "Black White Ink Curves",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "tumblr. tumblr. tumblr.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola4.jpg",
-    link: "",
+    link: "https://blackwhiteinkcurvesxxx.tumblr.com",
     start_date: ~N[2014-01-01 23:00:07],
     end_date: ~N[2014-01-01 23:00:07],
     tags: []
@@ -276,11 +274,11 @@ blackwhiteinkcurves = Ecto.Changeset.change(%Project{
 sweetcherryerotica = Ecto.Changeset.change(%Project{
     name: "sweetcherryerotica",
     display_name: "Sweet Cherry Erotica",
-    excerpt: "It wasn't too bad.",
-    description: ".",
+    excerpt: "tumblr. tumblr. tumblr.",
+    description: "I thought it would be a good way to get girls.",
     featured_image: "",
     background_image: "images/cool/coola5.jpg",
-    link: "",
+    link: "https://sweetcherryerotica.tumblr.com",    
     start_date: ~N[2014-01-01 23:00:07],
     end_date: ~N[2014-01-01 23:00:07],
     tags: []
@@ -289,11 +287,11 @@ sweetcherryerotica = Ecto.Changeset.change(%Project{
 tktxtktx = Ecto.Changeset.change(%Project{
     name: "tktxtktx",
     display_name: "tktxtktx",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "tumblr. tumblr. tumblr.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coolb1.jpg",
-    link: "",
+    link: "https://tktxtktx.tumblr.com",        
     start_date: ~N[2013-01-01 23:00:07],
     end_date: ~N[2013-01-01 23:00:07],
     tags: []
@@ -303,11 +301,11 @@ tktxtktx = Ecto.Changeset.change(%Project{
 inkquotes = Ecto.Changeset.change(%Project{
   name: "inkquotes",
   display_name: "Ink Quotes",
-  excerpt: "A bunch of personal posts and creative writing.",
+  excerpt: "tumblr. tumblr. tumblr.",
   description: ".",
   featured_image: "",
   background_image: "images/cool/coolb2.jpg",
-  link: "",
+  link: "https://inkquotes.tumblr.com",
   start_date: ~N[2013-01-01 23:00:07],
   end_date: ~N[2013-01-01 23:00:07],
   tags: []
@@ -317,7 +315,7 @@ inkquotes = Ecto.Changeset.change(%Project{
 adelaidesucks = Ecto.Changeset.change(%Project{
     name: "adelaidesucks",
     display_name: "adelaidesucks",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "blogspot. blogspot. blogspot.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -330,7 +328,7 @@ adelaidesucks = Ecto.Changeset.change(%Project{
 melbournesucks = Ecto.Changeset.change(%Project{
     name: "melbournesucks",
     display_name: "melbournesucks",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "blogspot. blogspot. blogspot.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -343,7 +341,7 @@ melbournesucks = Ecto.Changeset.change(%Project{
 sydneysucks = Ecto.Changeset.change(%Project{
     name: "sydneysucks",
     display_name: "sydneysucks",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "blogspot. blogspot. blogspot.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -356,7 +354,7 @@ sydneysucks = Ecto.Changeset.change(%Project{
 perthsucks = Ecto.Changeset.change(%Project{
     name: "perthsucks",
     display_name: "perthsucks",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "blogspot. blogspot. blogspot.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -369,7 +367,7 @@ perthsucks = Ecto.Changeset.change(%Project{
 hobartsucks = Ecto.Changeset.change(%Project{
     name: "hobartsucks",
     display_name: "hobartsucks",
-    excerpt: "A bunch of personal posts and creative writing.",
+    excerpt: "blogspot. blogspot. blogspot.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -393,7 +391,7 @@ Repo.insert!(writing_with_projects)
 financialreality2011 = Ecto.Changeset.change(%Project{
     name: "the-financial-reality-2015-16",
     display_name: "The Financial Reality",
-    excerpt: "Financial YouTube Channel.",
+    excerpt: "youtube. youtube. youtube.",
     description: ".",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
@@ -406,8 +404,8 @@ financialreality2011 = Ecto.Changeset.change(%Project{
 financialreality201213 = Ecto.Changeset.change(%Project{
     name: "the-financial-reality-2015-16",
     display_name: "The Financial Reality",
-    excerpt: "A bunch of personal posts and creative writing.",
-    description: ".",
+    excerpt: "youtube. youtube. youtube.",
+    description: "I thought I could make financial comedy work. I almost did, if it weren't for my bipolar.",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
     link: "",
@@ -419,8 +417,8 @@ financialreality201213 = Ecto.Changeset.change(%Project{
 financialreality201516 = Ecto.Changeset.change(%Project{
     name: "the-financial-reality-2015-16",
     display_name: "The Financial Reality",
-    excerpt: "A bunch of personal posts and creative writing.",
-    description: ".",
+    excerpt: "youtube. youtube. youtube.",
+    description: "I went a bit off the rails and created a bunch of videos that I think I regret.",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
     link: "",
@@ -440,8 +438,8 @@ Repo.insert!(youtube_with_projects)
 zerohedge = Ecto.Changeset.change(%Project{
     name: "the-zerohedge-daily-roundup",
     display_name: "The Zerohedge Daily Roundup",
-    excerpt: "A podcast I did summarising all the latest news stories on Zero Hedge.",
-    description: ".",
+    excerpt: "podcast. podcast. podcast.",
+    description: "A podcast based on news from Zero Hedge. What I produced in the end was a very odd subset of sardonic, financial comedy.",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
     link: "",
@@ -453,8 +451,8 @@ zerohedge = Ecto.Changeset.change(%Project{
 drudgereportreport = Ecto.Changeset.change(%Project{
     name: "drudge-report-report",
     display_name: "The Drudge Report Report",
-    excerpt: "A podcast I did summarising all the latest news stories on Zero Hedge.",
-    description: ".",
+    excerpt: "podcast. podcast. podcast.",
+    description: "A podcast based on news from Drudge Report. It was a comedy podcast.",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
     link: "",
@@ -466,8 +464,8 @@ drudgereportreport = Ecto.Changeset.change(%Project{
 wetalkyoudie = Ecto.Changeset.change(%Project{
     name: "we-talk-you-die",
     display_name: "We Talk, You Die",
-    excerpt: "A bunch of personal posts and creative writing.",
-    description: ".",
+    excerpt: "podcast. podcast. podcast.",
+    description: "A podcast I did with a friend. It was a comedy podcast.",
     featured_image: "",
     background_image: "images/cool/coola.jpg",
     link: "",
@@ -490,8 +488,8 @@ Repo.insert!(podcast_with_projects)
 dontholdback = Ecto.Changeset.change(%Project{
   name: "dont-hold-back",
   display_name: "Don't Hold Back",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
+  excerpt: "radio. radio. radio.",
+  description: "A radio show I did at Vision Australia Radio. It wasn't very enjoyable.",
   featured_image: "",
   background_image: "images/cool/coola.jpg",
   link: "",
@@ -501,25 +499,11 @@ dontholdback = Ecto.Changeset.change(%Project{
 })
 
 
-thehourlywage = Ecto.Changeset.change(%Project{
-  name: "the-hourly-wage",
-  display_name: "The Hourly Wage",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
-  featured_image: "",
-  background_image: "images/cool/coola.jpg",
-  link: "",
-  start_date: ~N[2011-01-01 23:00:07],
-  end_date: ~N[2011-01-01 23:00:07],
-  tags: []
-})
-
-
 thefaptacularonehourspecial = Ecto.Changeset.change(%Project{
   name: "the-faptacular-one-hour-special",
   display_name: "The Faptacular One Hour Special",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
+  excerpt: "radio. radio. radio.",
+  description: "A comedy radio show I did with a friend.",
   featured_image: "",
   background_image: "images/cool/coola.jpg",
   link: "",
@@ -532,8 +516,8 @@ thefaptacularonehourspecial = Ecto.Changeset.change(%Project{
 crack = Ecto.Changeset.change(%Project{
   name: "crack",
   display_name: "CRACK",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
+  excerpt: "radio. radio. radio.",
+  description: "A music radio show I did with a friend.",
   featured_image: "",
   background_image: "images/cool/coola.jpg",
   link: "",
@@ -546,8 +530,22 @@ crack = Ecto.Changeset.change(%Project{
 hiddencontrovery = Ecto.Changeset.change(%Project{
   name: "hidden-controvery",
   display_name: "Hidden Controvery",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
+  excerpt: "radio. radio. radio.",
+  description: "I wanted to do a show about conspiracy theories. It was okay.",
+  featured_image: "",
+  background_image: "images/cool/coola.jpg",
+  link: "",
+  start_date: ~N[2011-01-01 23:00:07],
+  end_date: ~N[2011-01-01 23:00:07],
+  tags: []
+})
+
+
+thehourlywage = Ecto.Changeset.change(%Project{
+  name: "the-hourly-wage",
+  display_name: "The Hourly Wage",
+  excerpt: "radio. radio. radio.",
+  description: "I wanted to do a radio show about finance. It was really lame.",
   featured_image: "",
   background_image: "images/cool/coola.jpg",
   link: "",
@@ -560,8 +558,8 @@ hiddencontrovery = Ecto.Changeset.change(%Project{
 justanothertopicalafternoon = Ecto.Changeset.change(%Project{
   name: "justanothertopicalafternoon",
   display_name: "Just Another Topical Afternoon",
-  excerpt: "A Radio show, would you believe it or not!",
-  description: ".",
+  excerpt: "radio. radio. radio.",
+  description: "Back when I was 16 years old I really wanted to become a radio show host. This was the first radio show I ever did.",
   featured_image: "",
   background_image: "images/cool/coola.jpg",
   link: "",

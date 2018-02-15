@@ -11,17 +11,22 @@ main {
 }
 
 
+
+
 // CATEGORY 
 
 
 .category__outer {
-
+  
   .category__individual {
+    margin-top: 0.8rem;
 
     .category__header {
       color: white;
+      
+      border-top: 2px solid black;
 
-      overflow: hidden;
+      // overflow: hidden;
       height: 8rem;
       
       position: relative;
@@ -32,7 +37,7 @@ main {
         font-size: 6rem;
                 
         position: absolute;
-        top: -40px;
+        top: -30px;
 
         text-shadow: 2px 2px #9c3fff;
         
@@ -44,13 +49,21 @@ main {
         left: 20px; 
 
         height: 3rem;
-        width: 100%;
+        width: 89%;
         background: black;
-        // opacity: 0.8;
+
+        transform: skew(-20deg);
+
+        margin-left: 4.2rem;
+        
       }
 
       .category__description {
-        margin-left: 2rem;
+
+        transform: skew(20deg);
+        margin-left: 1rem;
+
+        font-family: 'Slabo 13px', serif;
       }  
     }
   }
@@ -68,6 +81,7 @@ main {
 
   border-top: 1px solid white; 
   border-bottom: 1px solid white; 
+
 }
 
 
@@ -85,14 +99,12 @@ main {
 }
 
 .project__individual {
-  // background-image: url("../images/cool/cool1.jpg");
-
   box-shadow: 0 4px 4px -2px rgba(0,0,0,0.1);
 
   background: white;
   // background: lightgrey;
 
-  
+
   border-left: 1px solid white; 
 
   transform: skew(-20deg);
@@ -105,6 +117,7 @@ main {
   text-decoration: none;
   
 
+
   .project__background__image {
     background: grey;
 
@@ -116,7 +129,7 @@ main {
   }
 
   .project__display__name {          
-    transform: skew(20deg) rotate(-65deg) translate3d( 0, 0, 0);
+    transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
     text-align: center;
     width: 250px;
 
@@ -130,19 +143,44 @@ main {
     hyphens: none;
 
     font-size: 1.5rem;
+
+    padding: 0.5rem;
+    // border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+  
   }  
 
   .project__year {
     position: absolute;
-    right: 30px;
+    left: 20px;
+    top: 80px;
     text-align: center;
   
-    transform: skew(20deg) rotate(-65deg) translate3d( 0, 0, 0);
+    transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0); //rotate(-69deg) 
     width: 100px; 
     
     color: white;
+  }
+
+  .project__description {
+    position: absolute;
+    text-align: center;
+    
+    transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
+    width: 100px; 
+    
+    color: white;
+  
+    right: -50px;
+    width: 250px;
+    // text-align: right!important;
+  // font-family: 'Slabo 13px', sans-serif;
     
   }
+  
 
   .project__number {
     
@@ -154,6 +192,7 @@ main {
   background: white!important;
 
   .category__description {
+    text-decoration: none!important;
     // text-shadow: 3px 3px #9c3fff;
     color: black;
   }
@@ -163,30 +202,51 @@ main {
   top: 50px!important;
 }
 
-.project__year__hero {
-  right: -50px!important;
-  width: 250px!important;
+.project__description__hero {
+  position: absolute;
+  text-align: center;
+  
+  transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
+  width: 100px; 
+  
+  color: white;
+
+  right: -50px;
+  width: 250px;
   // text-align: right!important;
 }
+
 
 .category__header__hero,
 .project__outer__hero__colour,
 .project__outer__hero {
   background: black;
+  background-image: url("../images/cool/cool1.jpg");
+  background-size: cover;
 
 
   .project__individual:hover {
     background: black;
     border-left: 1px solid black;
+    // min-width: 320px;
   }
+
   .project__individual:hover > .project__display__name {
     color: black;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
   }
   .project__individual {
     border-right: 1px solid black;    
 
+    // .project__background__image {
+    //   border-right: 1px solid black;
+    //   border-top: 1px solid black;
+    // }
+
     .project__display__name {
       color: white;
+      // text-decoration: underline cyan;
     }
   }
 
@@ -196,6 +256,18 @@ main {
 }
 
 
+.category__header__hero {
+  background-image: url("../images/cool/cool1.jpg");
+  background-size: cover;
+  
+}
+
+.project__outer__hero {
+  background-image: url("../images/cool/cool1.jpg");
+  background-size: cover;
+  
+}
+
 .category__header__programming,
 .project__outer__programming__colour,
 .project__outer__programming {
@@ -204,15 +276,27 @@ main {
   .project__individual:hover {
     background: cyan;
     border-left: 1px solid cyan;
+    // min-width: 320px;
   }
   .project__individual:hover > .project__display__name {
     color: cyan;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
   }
   .project__individual {
     border-right: 1px solid cyan;    
 
+    // .project__background__image {
+    //   border-right: 1px solid cyan;
+    //   border-top: 1px solid cyan;
+    // }
+
     .project__display__name {
       color: white;
+
+      // text-decoration: underline yellow;
+      
     }
   }
 
@@ -230,15 +314,25 @@ main {
   .project__individual:hover {
     background: yellow;
     border-left: 1px solid yellow;
+    // min-width: 320px;
   }
   .project__individual:hover > .project__display__name {
     color: yellow;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
   }
   .project__individual {
     border-right: 1px solid yellow;    
 
+    // .project__background__image {
+    //   border-right: 1px solid yellow;
+    //   border-top: 1px solid yellow;
+    // }
+
     .project__display__name {
       color: white;
+      // text-decoration: underline #ff33f5;
     }
   }
 
@@ -252,25 +346,36 @@ main {
 .category__header__youtube,
 .project__outer__youtube__colour,
 .project__outer__youtube {
-  background: #ff00f6;  
+  background: #ff33f5;  
 
   .project__individual:hover {
-    background: #ff00f6;
-    border-left: 1px solid #ff00f6;
+    background: #ff33f5;
+    border-left: 1px solid #ff33f5;
+    // min-width: 320px;
   }
   .project__individual:hover > .project__display__name {
-    color: #ff00f6;
+    color: #ff33f5;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
   }
   .project__individual {
-    border-right: 1px solid #ff00f6;    
+    border-right: 1px solid #ff33f5;    
+
+    // .project__background__image {
+    //   border-right: 1px solid #ff33f5;
+    //   border-top: 1px solid #ff33f5;
+    // }
 
     .project__display__name {
       color: white;
+      // text-decoration: underline #3afa14;      
     }
   }
 
   .category__description {
-    text-decoration: underline #ff00f6;
+    text-decoration: underline #ff33f5;
+    
   }
 }
 
@@ -282,15 +387,25 @@ main {
   .project__individual:hover {
     background: #3afa14; 
     border-left: 1px solid #3afa14;
+    // min-width: 320px;    
   }
   .project__individual:hover > .project__display__name {
     color: #3afa14;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
   }
   .project__individual {
     border-right: 1px solid #3afa14;    
 
+    // .project__background__image {
+    //   border-right: 1px solid #3afa14;
+    //   border-top: 1px solid #3afa14;
+    // }
+
     .project__display__name {
       color: white;
+      // text-decoration: underline #7C24FD;            
     }
   }
 
@@ -308,15 +423,24 @@ main {
   .project__individual:hover {
     background: #7C24FD;
     border-left: 1px solid #7C24FD;
+    // min-width: 320px;
   }
   .project__individual:hover > .project__display__name {
     color: #7C24FD;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
   }
   .project__individual {
     border-right: 1px solid #7C24FD;    
 
+    // .project__background__image {
+    //   border-right: 1px solid #7C24FD;
+    //   border-top: 1px solid #7C24FD;
+    // }
+
     .project__display__name {
       color: white;
+      // text-decoration: underline cyan;
     }
   }
 
@@ -325,3 +449,10 @@ main {
   }
   
 }
+
+
+.slash__degree {
+  display: inline-block;
+  transform: skew(-12deg);
+}
+

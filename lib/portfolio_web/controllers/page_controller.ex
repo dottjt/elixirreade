@@ -10,6 +10,11 @@ defmodule PortfolioWeb.PageController do
     render conn, "homepage.html", categories: categories, intro: intro
   end
 
+  def hire(conn, _params) do
+
+    render conn, "hire.html"
+  end
+
   def about(conn, _params) do
 
     render conn, "about.html"

@@ -1,12 +1,14 @@
 <div class="page">
 
   <div class="content">
-    <h1>Contact</h1>
+    <h1>連絡して contact.</h1>
+    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>
 
-    <p>Drop me a line.</p>
+    <p>My name is Julius.</p>
+
+    <p>I am contactable via email, and provided that there is literally no one else I know with my name, am highly stalkable via social media.</p>
 
     <p>julius.reade @ gmail . com</p>
 
-    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>
   </div>
 </div>

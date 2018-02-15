@@ -1,17 +1,37 @@
 <div class="page">
 
   <div class="content">
-    <h1 class="">About</h1>
+    <h1 class="">私について about.</h1>
+    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>    
 
     <p>My name is Julius.</p>
     <p>I'm a human being, just like you.</p>
-    <p>Thanks to evolution, as well as all the hard work and efforts of our ancestors, we are now earth's most dominant species.</p>
-    <p>Which is a really cool, since it provides us with the freedom to express and explore this world however we want (at least here in Australia).</p>
-    <p>Personally speaking, I like to create software and write diabolical works of deeply unfounded literature.</p>
-    <p>It's worked pretty well for me so far.</p>
+    <p>I like to write, code, have fun and spend time with my lovely partner.</p>
+    <p>The only difference is that I'm one of 2% of the population who suffers from bipolar disorder, commonly referred to as 'manic depression'.</p>
+    <p>Which means I have to live my life a little differently, in order to achieve the same outcomes as most people.</p>
+    <p>No soft drink. No junk food. No caffine. No alcohol. No drugs. Regular weight-training. Daily fasting. Regular routines and bedtimes. 5:50am wake ups. Cold showers. Studying. Meditation. Self-awareness exercises. Paleo, high-fat diets.</p>
+    <p>Absolutely anything in my power to maintain control over myself, and prevent myself from becoming manic (or at least help bring myself back to baseline).</p>
+    <p>The only problem is that after spending a few weeks within the "my physical and mental health is perfect" zeitgeist, it becomes almost impossible to discern whether I've become manic or not, which is why on average I last about two months until everything collapses.</p>
+    <p>(I mean, how self-aware can you be of being self-aware?)</p>
+    <p>The good news is that I have my mental health 100% sorted out and I know exactly what I need to do to get myself back into shape.</p>
+    <p>The bad news is that when I fall into my depressive phases, I lose all sense of myself including all knowledge of what I have to do to get back into shape.</p>
+    <p>This is why I maintain routine in my life, in order to keep track of who I am, even when my mind is not there to assist me.</p>
+    <p>Otherwise, I'd just sit there on the floor and sob uncontrollably for an eternity (previously it was usually until I got bored, and realised I could do better for myself.)</p>
+    <p>In other words, I have everything in my life sorted out, it's just sometimes it all disappears from me and I need to try a bit harder than usual to get it back.</p>
+    <p>Aside from that, I'm almost just like you.</p>
+    <p>A regular, somewhat comically indecent human being.</p>
+    <p>Like Seinfeld.</p>
     <p>Regards,</p>
     <p>Julius</p>
-
-    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>    
   </div>
 </div>
+
+<!-- <p>Oh, and it means I become easily obsessed. Which is why I've maintained hundreds of intense hobbies for months at a time.</p>
+<p>It is simply who I am.</p> -->
+
+    <!-- <p>So, what does the depression phase of my bipolar disorder feel like?</p>
+    <p>Well, imagine waking up one day to realise that you have reason to exist.</p>
+    <p>In a world where everything you cared about in you life simply no longer mattered, even though you still have to interact with them as if they do.</p>
+    <p>You feel guilt, shame and sadness for no particular reason - and while you know it's not real, it feels real and causes you to shutdown and self-harm in various ways.</p>
+    <p>Of course, I should be grateful for what I have in life.</p>
+    <p>Very few people make it this far.</p> -->

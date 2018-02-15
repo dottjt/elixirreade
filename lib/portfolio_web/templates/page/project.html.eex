@@ -1,6 +1,8 @@
 <div class="page">
     
   <div class="content">
+    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>        
+    
     <h1><%= @project.display_name %></h1>
     <h2><%= @project.start_date.year %> - <%= @project.end_date.year %></h2>
     <h3><%= @project.link %></h3>
@@ -9,7 +11,6 @@
     <p><%= @project.description %></p>
 
     <p>Julius Reade</p>
-    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>        
   </div>
 
 </div>
@@ -20,7 +21,7 @@
   <div class="category__individual__top"></div>
   <div class="category__individual">
     <div class="category__header category__header__<%= @category.name %>">
-        <h2 class="category__display__name">Similar Projects /////////</h2>
+        <h2 class="category__display__name">Similar Projects <span class="slash__degree">/////////</span></h2>
 
         <div class="category__description__background">
             <h3 class="category__description"><%= @category.description %></h3>    
@@ -29,14 +30,16 @@
 
     <div class="project__outer project__outer__<%= @category.name %>">
       <div class="project__outer__colour project__outer__<%= @category.name %>__colour"></div>
-      <%= Enum.sort_by(@category.projects, &(&1.start_date))
+      <%= Enum.sort_by(@category.projects, &(&1.end_date))
           |> Enum.reverse()      
           |> Enum.map(fn (project) -> %>
-          <a class="project__individual" href="<%= page_path(@conn, :project, @category.name, project.name) %>">                             
-              <div class="project__background__image"></div>
-              <h4 class="project__display__name"><%= project.display_name %></h3>
-              <h5 class="project__year"><%= project.start_date.year %> - <%= if(DateTime.utc_now.year === project.end_date.year) do "Present" else project.end_date.year end %></h4>
-          </a>
+          
+            <a class="project__individual" href="<%= page_path(@conn, :project, @category.name, project.name) %>">                             
+                <div class="project__background__image"></div>
+                <h4 class="project__display__name"><%= project.display_name %></h3>
+                <h5 class="project__year"><%= project.start_date.year %> - <%= if(DateTime.utc_now.year === project.end_date.year) do "Present" else project.end_date.year end %></h4>
+                <h5 class="project__description"><%= project.excerpt %></h4>
+            </a>
       <% end) %>
     </div>
 
