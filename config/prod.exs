@@ -18,9 +18,9 @@ config :portfolio, PortfolioWeb.Endpoint,
 
   url: [host: "juliusreade.com", port: 443],
   https: [:inet6,
-        port: 443,
-        keyfile: ,
-        certfile: ],
+          port: 443,
+          keyfile: "/etc/letsencrypt/live/juliusreade.com/privkey.pem",
+          certfile: "/etc/letsencrypt/live/juliusreade.com/fullchain.pem"],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
