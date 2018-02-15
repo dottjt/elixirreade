@@ -7,8 +7,16 @@ defmodule Portfolio.Repo.Migrations.CreateProjects do
       add :name, :string
       add :display_name, :string
       add :excerpt, :string
-      add :description, :string
+      add :description, :text
+      
       add :featured_image, :string
+      add :background_image, :string
+
+      add :link, :string
+
+      add :start_date, :naive_datetime
+      add :end_date, :naive_datetime
+      
       add :category_id, references(:categories, on_delete: :nothing, type: :binary_id)
 
       timestamps()

@@ -8,9 +8,9 @@ defmodule Portfolio.Core.Category do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "categories" do
+    field :name, :string    
     field :display_name, :string
     field :description, :string
-    field :name, :string
 
     has_many :projects, Project
 
@@ -21,6 +21,7 @@ defmodule Portfolio.Core.Category do
   def changeset(%Category{} = category, attrs) do
     category
     |> cast(attrs, [:name, :display_name, :description])
+    |> unique_constraint(:name)      
     |> validate_required([:name, :display_name, :description])
   end
 end

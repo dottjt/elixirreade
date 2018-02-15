@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Julius Reade">
+<meta name="keywords" content="Julius Reade">
+
+<title>Julius Reade | <%= @meta_title %></title>
+<meta property="og:title" content="<%= @meta_title %>">
+<meta name="twitter:title" content="<%= @meta_title %>">    
+<meta name="twitter:image:alt" content="<%= @meta_title %>">
+
+<meta name="description" content="<%= @meta_description %>">
+<meta property="og:description" content="<%= @meta_description %>">    
+<meta name="twitter:description" content="<%= @meta_description %>">
+<meta property="og:site_name" content="<%= @meta_description %>">
+
+<meta property="og:image" content="<%= @product.featured_image %>">
+<meta name="twitter:image" content="<%= @product.featured_image %>">
+<meta name="twitter:image:alt" content="<%= Application.get_env(:ac, :website_alt_image) %>">    
+
+<meta property="og:url" content="<%= url(@conn) <> @conn.request_path %>">
+
+<meta name="twitter:site" content="<%= Application.get_env(:ac, :website_twitter) %>">
+<meta name="twitter:creator" content="<%= Application.get_env(:ac, :website_twitter) %>">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>">
+<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>about">
+<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>contact">
+
+<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= Application.get_env(:ac, :google_analytics_tracking_id) %>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<%= Application.get_env(:ac, :google_analytics_tracking_id) %>');
+</script>
+
+

@@ -7,10 +7,10 @@ defmodule Portfolio.Core.Tag do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "tags" do
+    field :name, :string    
     field :display_name, :string
     field :excerpt, :string
     field :featured_image, :string
-    field :name, :string
 
     # field :item_id, :binary_id
     # field :project_id, :binary_id

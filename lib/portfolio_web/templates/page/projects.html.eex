@@ -1,0 +1,28 @@
+<div class="category__outer">
+    <%= Enum.map(@categories, fn(category) -> %>
+      <div class="category__individual">
+        <div class="category__header category__header__<%= category.name %>">
+            <h2 class="category__display__name"><%= category.display_name %> /////////</h2>
+  
+            <div class="category__description__background">
+                <h3 class="category__description"><%= category.description %></h3>    
+            </div>
+        </div>
+  
+        <div class="project__outer project__outer__<%= category.name %>">
+          <div class="project__outer__colour project__outer__<%= category.name %>__colour"></div>
+          <%= Enum.sort_by(category.projects, &(&1.start_date))
+              |> Enum.reverse()      
+              |> Enum.map(fn({k, project}) -> %>
+              <a class="project__individual" href="<%= page_path(@conn, :project, category.name, project.name) %>">                             
+                  <div class="project__background__image"></div>
+                  <h4 class="project__display__name"><%= project.display_name %></h3>
+                  <h5 class="project__year"><%= project.start_date.year %> - <%= if(DateTime.utc_now.year === project.end_date.year) do "Present" else project.end_date.year end %></h4>
+              </a>
+          <% end) %>
+        </div>
+  
+      </div> 
+    <% end) %>
+  </div>
+  

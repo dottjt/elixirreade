@@ -1,7 +1,0 @@
-<div>
-    <ul class="flex flex-row-reverse">
-        <a href=""><li class="f3">Blog</li></a>
-        <a href=""><li class="f3">About</li></a>
-        <a href=""><li class="f3">Contact</li></a>
-    </ul>
-</div>

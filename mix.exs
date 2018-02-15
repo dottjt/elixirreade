@@ -39,7 +39,7 @@ defmodule Portfolio.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:gettext, "~> 0.11"},
+      {:gettext, "~> 0.13.1"},
       {:cowboy, "~> 1.0"},
 
       {:arc, "~> 0.8.0"},
@@ -47,6 +47,8 @@ defmodule Portfolio.Mixfile do
 
       {:timex, "~> 3.1"},
       {:coherence, "~> 0.5"},
+    
+      {:ex_admin, github: "smpallen99/ex_admin", branch: "phx-1.3"},
 
       {:sitemap, "~> 1.0"},
       {:quantum, ">= 2.2.0"}

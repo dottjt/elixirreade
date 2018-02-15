@@ -5,9 +5,11 @@
 # is restricted to this project.
 use Mix.Config
 
+
 # General application configuration
 config :portfolio,
   ecto_repos: [Portfolio.Repo]
+
 
 # Configures the endpoint
 config :portfolio, PortfolioWeb.Endpoint,
@@ -17,10 +19,31 @@ config :portfolio, PortfolioWeb.Endpoint,
   pubsub: [name: Portfolio.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+
+config :portfolio, Portfolio.Scheduler,
+  jobs: [
+    # Every day at mid-day
+    {"0 12 * * *", {Portfolio.Sitemaps, :generate, []}} # 
+    # {"40 23 * * *", {ProductScheduler, :publish_scheduled_posts, []}} 
+  ]
+
+config :ex_admin,
+  repo: Portfolio.Repo,
+  module: Portfolio,    # Portfolio.Web for phoenix >= 1.3.0-rc 
+  modules: [
+    Portfolio.ExAdmin.Dashboard,
+    Portfolio.ExAdmin.Project,
+    Portfolio.ExAdmin.Category,
+    Portfolio.ExAdmin.Item,
+    Portfolio.ExAdmin.Tag,
+  ]
+
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
 
 config :arc,
   storage: Arc.Storage.Local
@@ -42,4 +65,7 @@ config :coherence,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+
+config :xain, :after_callback, {Phoenix.HTML, :raw}
 

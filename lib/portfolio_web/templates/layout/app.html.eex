@@ -15,12 +15,12 @@
   </head>
 
   <body>
-    <%= render_partial "header.html", assigns %>
 
-    <div class="mw9 center ph3-ns">
+    <main>
         <%= render @view_module, @view_template, assigns %>
-    </div> <!-- /container -->
+    </main> <!-- /container -->
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
   </body>
 </html>

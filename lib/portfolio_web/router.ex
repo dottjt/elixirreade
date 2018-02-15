@@ -1,6 +1,7 @@
 defmodule PortfolioWeb.Router do
   use PortfolioWeb, :router
   use Coherence.Router
+  use ExAdmin.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -21,11 +22,6 @@ defmodule PortfolioWeb.Router do
   end
 
 
-  # pipeline :api do
-  #   plug :accepts, ["json"]
-  # end
-
-
   scope "/" do
     pipe_through :browser
     coherence_routes()
@@ -33,10 +29,16 @@ defmodule PortfolioWeb.Router do
 
   scope "/", PortfolioWeb do
     get "/", PageController, :homepage
-  
-    get "/:category", PageController, :category 
-    get "/:category/:project", PageController, :project 
-    get "/:category/:project/:item", PageControlller, :item 
+    get "/hire", PageController, :hire    
+    get "/about", PageController, :about
+    get "/contact", PageController, :contact
+    get "/projects", PageController, :projects
+
+    get "/projects/:category", PageController, :category 
+    get "/projects/:category/:project", PageController, :project 
+    get "/projects/:category/:project/:item", PageControlller, :item 
+    
+    # index
 
   end
 
@@ -46,15 +48,16 @@ defmodule PortfolioWeb.Router do
     coherence_routes :protected
   end
 
+  scope "/admin", ExAdmin do
+    pipe_through :protected
+    admin_routes()
+  end
+
   scope "/admin", PortfolioWeb do 
-    resources "/projects", ProjectController
     resources "/items", ItemController
+    resources "/projects", ProjectController
     resources "/categories", CategoryController
     resources "/tags", TagController
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PortfolioWeb do
-  #   pipe_through :api
-  # end
 end

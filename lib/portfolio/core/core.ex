@@ -17,6 +17,18 @@ defmodule Portfolio.Core do
       [%Project{}, ...]
 
   """
+
+
+  def list_intro do 
+    # 私に
+    [ 
+      %{display_name: "私を雇う hire me.", description: "hire me. hire me. hire me.", link: "/hire" },      
+      # %{display_name: "social.", description: "social. social. social.", link: "/social" },
+      %{display_name: "私について about.", description: "about. about. about.", link: "/about" },
+      %{display_name: "連絡して contact.", description: "contact. contact. contact.", link: "/contact" }
+    ]
+  end
+
   def list_projects do
     Repo.all(Project)
   end
@@ -36,7 +48,7 @@ defmodule Portfolio.Core do
 
   """
   def get_project!(id), do: Repo.get!(Project, id)
-  def get_project_name!(name), do: Repo.get_by!(Project, name)
+  def get_project_name!(name), do: Repo.get_by!(Project, name: name)
 
   @doc """
   Creates a project.
@@ -147,6 +159,15 @@ defmodule Portfolio.Core do
 
   """
   def get_category!(id), do: Repo.get!(Category, id)
+  def get_category_name!(name), do: Repo.get!(Category, name: name)
+
+  def get_category_with_projects(category_name) do
+    Repo.one from category in Category,
+        where: [name: ^category_name],
+        left_join: projects in assoc(category, :projects),
+        left_join: items in assoc(projects, :items),
+        preload: [projects: {projects, items: items}]
+  end
 
   @doc """
   Creates a category.
@@ -243,7 +264,7 @@ defmodule Portfolio.Core do
 
   """
   def get_item!(id), do: Repo.get!(Item, id)
-  def get_item_name!(name), do: Repo.get_by!(Item, name)
+  def get_item_name!(name), do: Repo.get_by!(Item, name: name)
 
   @doc """
   Creates a item.

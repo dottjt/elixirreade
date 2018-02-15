@@ -1,6 +1,12 @@
-<div class="contact__page">
+<div class="page">
+
+  <div class="content">
     <h1>Contact</h1>
-    <p>Perhaps you're either one of either estranged parents</p>
 
+    <p>Drop me a line.</p>
 
+    <p>julius.reade @ gmail . com</p>
+
+    <a class="page__link" href="<%= page_path(@conn, :homepage) %>">to homepage.</a>
+  </div>
 </div>
