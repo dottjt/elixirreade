@@ -16,9 +16,9 @@ use Mix.Config
 config :portfolio, PortfolioWeb.Endpoint,
   load_from_system_env: true,
 
-  url: [host: "juliusreade.com", port: 443],
+  url: [host: "juliusreade.com", port: 1313],
   https: [:inet6,
-          port: 443,
+          port: 1313,
           keyfile: "/etc/letsencrypt/live/juliusreade.com/privkey.pem",
           certfile: "/etc/letsencrypt/live/juliusreade.com/fullchain.pem"],
   cache_static_manifest: "priv/static/cache_manifest.json"
