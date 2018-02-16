@@ -24,7 +24,7 @@
         <h2 class="category__display__name">Similar Projects <span class="slash__degree">/////////</span></h2>
 
         <div class="category__description__background">
-            <h3 class="category__description"><%= @category.description %></h3>    
+            <h3 class="category__description"><%= @category.display_name %> - <%= @category.description %></h3>    
         </div>
     </div>
 

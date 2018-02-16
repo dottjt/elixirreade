@@ -60,8 +60,6 @@ radio = Ecto.Changeset.change(%Category{
 })
 
 
-
-
 # Categories - Programming
 
 awful_cms = Ecto.Changeset.change(%Project{
@@ -214,7 +212,7 @@ medium = Ecto.Changeset.change(%Project{
     description: ".",
     featured_image: "",
     background_image: "images/cool/cool2.jpg",
-    link: "", #https://medium.com/@juliusreade
+    link: "https://medium.com/@juliusreade",
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2017-01-01 23:00:07],
     tags: []
@@ -227,7 +225,7 @@ perspectivetheory = Ecto.Changeset.change(%Project{
     description: "So, I used to have a lot of mental health issues. And I thought to myself, well, if I write about them then maybe I can control them. Nup. Doesn't work one bit. As it turns out, writing and the practice of self-awareness are two very separate and different things.",
     featured_image: "",
     background_image: "images/cool/coola1.jpg",
-    link: "", #https://medium.com/@juliusreade
+    link: "",
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2015-01-01 23:00:07],
     tags: []
