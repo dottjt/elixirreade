@@ -8,6 +8,10 @@
 main {
   overflow-y: hidden;
   width: 100%;
+
+  background-image: url("../images/cool/cool1.jpg");
+  background-position: bottom left;
+  background-size: contain;
 }
 
 
@@ -15,9 +19,22 @@ main {
 
 
 .category__outer {
-  
+  .category__individual__top {
+    margin-top: 1.2rem;
+    height: 0.4rem;
+    width: 30%;
+    // border: 1px solid black;
+    position:relative;
+    right: 0;
+
+    // transform: rotate(-5deg) skew(3deg) translate3d( 0, 0, 0);
+    
+    // text-align: right;
+    // background: black;
+  }
+
   .category__individual {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
 
     .category__header {
       color: white;
@@ -50,10 +67,25 @@ main {
         width: 89%;
         background: black;
 
+
         transform: skew(-20deg);
 
         margin-left: 4.2rem;
         
+        .category__description__background__two {
+          position: absolute;
+          top: 10px;
+          left: -83px;   
+          z-index: -5;
+
+          width: 50%;
+          height: 100%;
+          background: black;
+          // transform: skew(-20deg);
+          margin-left: 5.2rem;
+          
+        }
+
       }
 
       .category__description {
@@ -63,6 +95,10 @@ main {
 
         font-family: 'Slabo 13px', serif;
         font-weight: 100;
+
+        position: relative;
+        top: -1.8rem;
+        font-size: 2rem;
       }  
     }
   }
@@ -191,9 +227,9 @@ main {
   background: white!important;
 
   .category__description {
-    text-decoration: none!important;
     // text-shadow: 3px 3px #9c3fff;
     color: black;
+
   }
 }
 
@@ -204,6 +240,7 @@ main {
 .project__description__hero {
   position: absolute;
   text-align: center;
+  text-decoration: underline #9c3fff;
   
   transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
   width: 100px; 
@@ -245,12 +282,12 @@ main {
 
     .project__display__name {
       color: white;
-      // text-decoration: underline cyan;
     }
+
   }
 
   .category__description {
-    text-decoration: underline black;
+    text-decoration: underline #9c3fff;
   }
 }
 
@@ -293,13 +330,17 @@ main {
 
     .project__display__name {
       color: white;
-
       // text-decoration: underline yellow;
-      
     }
+
+    .project__description {
+      text-decoration: underline cyan;
+    }
+
   }
 
   .category__description {
+
     text-decoration: underline cyan;
   }
 }
@@ -333,6 +374,13 @@ main {
       color: white;
       // text-decoration: underline #ff33f5;
     }
+
+
+    .project__description {
+      text-decoration: underline yellow;
+    }
+
+
   }
 
   .category__description {
@@ -370,6 +418,11 @@ main {
       color: white;
       // text-decoration: underline #3afa14;      
     }
+
+    .project__description {
+      text-decoration: underline #ff33f5;
+    }
+
   }
 
   .category__description {
@@ -406,6 +459,11 @@ main {
       color: white;
       // text-decoration: underline #7C24FD;            
     }
+
+    .project__description {
+      text-decoration: underline #3afa14;
+    }
+
   }
 
   .category__description {
@@ -441,6 +499,11 @@ main {
       color: white;
       // text-decoration: underline cyan;
     }
+
+    .project__description {
+      text-decoration: underline #7C24FD;
+    }
+
   }
 
   .category__description {

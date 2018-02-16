@@ -1,10 +1,12 @@
 <div class="category__outer">
+  <!-- <div class="category__individual__top"></div> -->
   <div class="category__individual">
     <div class="category__header category__header__hero">
         <h2 class="category__display__name">Julius Reade <span class="slash__degree">/////////</span></h2>
 
         <div class="category__description__background category__description__background__hero">
-            <h3 class="category__description">developer. melbourne. australia. </h3>    
+          <!-- <div class="category__description__background__two"></div>           -->
+          <h3 class="category__description">developer. melbourne. australia. </h3>    
         </div>
     </div>
 
@@ -26,12 +28,13 @@
 
 <div class="category__outer">
   <%= Enum.map(@categories, fn(category) -> %>
-    <div class="category__individual__top"></div>
+    <!-- <div class="category__individual__top"></div> -->
     <div class="category__individual">
       <div class="category__header category__header__<%= category.name %>">
           <h2 class="category__display__name"><%= category.display_name %> <span class="slash__degree">/////////</span></h2>
 
           <div class="category__description__background">
+              <div class="category__description__background__two"></div>          
               <h3 class="category__description"><%= category.description %></h3>    
           </div>
       </div>

@@ -32,7 +32,7 @@ User.changeset(%User{}, %{name: "Julius Reade", email: "julius.reade@gmail.com",
 programming = Ecto.Changeset.change(%Category{
     name: "programming",
     display_name: "Programming",
-    description: "My life passion.",
+    description: "What companies pay me to do.",
 })
 
 writing = Ecto.Changeset.change(%Category{
@@ -212,7 +212,7 @@ medium = Ecto.Changeset.change(%Project{
     description: ".",
     featured_image: "",
     background_image: "images/cool/cool2.jpg",
-    link: "https://medium.com/@juliusreade",
+    link: "https://medium.com/@veryslowly",
     start_date: ~N[2015-01-01 23:00:07],
     end_date: ~N[2017-01-01 23:00:07],
     tags: []

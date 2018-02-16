@@ -26,8 +26,8 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>">
-<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>about">
-<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>contact">
+<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>/about">
+<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>/contact">
 
 <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">    
 

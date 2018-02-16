@@ -9,6 +9,8 @@ use Mix.Config
 # General application configuration
 config :portfolio,
   ecto_repos: [Portfolio.Repo],
+  website_domain: "https://juliusreade.com",
+  website_twitter: "@JuliusReade",
   google_analytics_tracking_id: "UA-85083093-1",
   website_alt_image: "images/cool/cool1.jpg"
 
@@ -25,8 +27,8 @@ config :portfolio, PortfolioWeb.Endpoint,
 config :portfolio, Portfolio.Scheduler,
   jobs: [
     # Every day at mid-day
-    # {"0 12 * * *", {Portfolio.Sitemaps, :generate, []}} # 
-    {"* * * * *", {Portfolio.Sitemaps, :generate, []}} # 
+    {"0 12 * * *", {Portfolio.Sitemaps, :generate, []}} # 
+    # {"* * * * *", {Portfolio.Sitemaps, :generate, []}} # 
     # {"40 23 * * *", {ProductScheduler, :publish_scheduled_posts, []}} 
   ]
 
