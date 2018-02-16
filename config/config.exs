@@ -25,7 +25,8 @@ config :portfolio, PortfolioWeb.Endpoint,
 config :portfolio, Portfolio.Scheduler,
   jobs: [
     # Every day at mid-day
-    {"0 12 * * *", {Portfolio.Sitemaps, :generate, []}} # 
+    # {"0 12 * * *", {Portfolio.Sitemaps, :generate, []}} # 
+    {"* * * * *", {Portfolio.Sitemaps, :generate, []}} # 
     # {"40 23 * * *", {ProductScheduler, :publish_scheduled_posts, []}} 
   ]
 
