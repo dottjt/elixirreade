@@ -99,7 +99,7 @@ awful_affiliate = Ecto.Changeset.change(%Project{
     excerpt: "elixir. phoenix. elm.",
     description: "Awful Affiliate is the website template I use for all my affiliate websites.
     It is a fully functioning Phoenix Framework application, allowing you 
-    to create products, updates, tags, categories - and whatever the hell you want. 
+    to create products, updates, tags, categories - including whatever the hell you want. 
     ",
     featured_image: "",
     background_image: "images/cool/coolc.jpg",

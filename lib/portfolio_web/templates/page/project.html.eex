@@ -5,7 +5,7 @@
     
     <h1><%= @project.display_name %></h1>
     <h2><%= @project.start_date.year %> - <%= @project.end_date.year %></h2>
-    <h3><%= @project.link %></h3>
+    <p><a class="page__link" href="<%= @project.link %>"></a><%= @project.link %></p>
 
     <img src="<%= @project.featured_image %>" alt="">
     <p><%= @project.description %></p>
