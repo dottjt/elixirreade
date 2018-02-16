@@ -95,6 +95,7 @@
         .category__description__tip {
           width: 20px;
           clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
+          -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
           height: 100%;
 
           left: -15px;
