@@ -15,32 +15,32 @@
 <meta name="twitter:description" content="<%= @meta_description %>">
 <meta property="og:site_name" content="<%= @meta_description %>">
 
-<meta property="og:image" content="<%= Application.get_env(:ac, :website_alt_image) %>">
-<meta name="twitter:image" content="<%= Application.get_env(:ac, :website_alt_image) %>">
-<meta name="twitter:image:alt" content="<%= Application.get_env(:ac, :website_alt_image) %>">    
+<meta property="og:image" content="<%= Application.get_env(:portfolio, :website_alt_image) %>">
+<meta name="twitter:image" content="<%= Application.get_env(:portfolio, :website_alt_image) %>">
+<meta name="twitter:image:alt" content="<%= Application.get_env(:portfolio, :website_alt_image) %>">    
 
 <meta property="og:url" content="<%= url(@conn) <> @conn.request_path %>">
 
-<meta name="twitter:site" content="<%= Application.get_env(:ac, :website_twitter) %>">
-<meta name="twitter:creator" content="<%= Application.get_env(:ac, :website_twitter) %>">
+<meta name="twitter:site" content="<%= Application.get_env(:portfolio, :website_twitter) %>">
+<meta name="twitter:creator" content="<%= Application.get_env(:portfolio, :website_twitter) %>">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>">
-<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>/about">
-<link rel="preconnect" href="<%= Application.get_env(:ac, :website_domain) %>/contact">
+<link rel="preconnect" href="<%= Application.get_env(:portfolio, :website_domain) %>">
+<link rel="preconnect" href="<%= Application.get_env(:portfolio, :website_domain) %>/about">
+<link rel="preconnect" href="<%= Application.get_env(:portfolio, :website_domain) %>/contact">
 
 <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">    
 
 <link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<%= Application.get_env(:ac, :google_analytics_tracking_id) %>"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= Application.get_env(:portfolio, :google_analytics_tracking_id) %>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '<%= Application.get_env(:ac, :google_analytics_tracking_id) %>');
+  gtag('config', '<%= Application.get_env(:portfolio, :google_analytics_tracking_id) %>');
 </script>
 
 
