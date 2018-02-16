@@ -5,7 +5,7 @@
 <meta name="author" content="Julius Reade">
 <meta name="keywords" content="Julius Reade">
 
-<title>Julius Reade | <%= @meta_title %></title>
+<title><%= @meta_title %></title>
 <meta property="og:title" content="<%= @meta_title %>">
 <meta name="twitter:title" content="<%= @meta_title %>">    
 <meta name="twitter:image:alt" content="<%= @meta_title %>">
