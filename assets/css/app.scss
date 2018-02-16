@@ -240,7 +240,7 @@
   background: white!important;
 
   .category__description {
-    text-shadow: 3px 3px #9c3fff;
+    // text-shadow: 3px 3px #9c3fff;
     color: black;
 
   }
@@ -253,7 +253,8 @@
 .project__description__hero {
   position: absolute;
   text-align: center;
-  text-decoration: underline #9c3fff;
+  // text-decoration: underline #9c3fff;
+  
   
   transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
   width: 100px; 

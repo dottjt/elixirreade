@@ -24,15 +24,12 @@ Repo.delete_all Project
 User.changeset(%User{}, %{name: "Julius Reade", email: "julius.reade@gmail.com", password: "hellothere", password_confirmation: "hellothere"})
     |> Repo.insert!
 
-
-
-
 # Categories
 
 programming = Ecto.Changeset.change(%Category{
     name: "programming",
     display_name: "Programming",
-    description: "Companies pay me to write code.",
+    description: "What companies pay me to do.",
 })
 
 writing = Ecto.Changeset.change(%Category{
