@@ -14,6 +14,8 @@ defmodule Portfolio.Application do
       supervisor(PortfolioWeb.Endpoint, []),
       # Start your own worker by calling: Portfolio.Worker.start_link(arg1, arg2, arg3)
       # worker(Portfolio.Worker, [arg1, arg2, arg3]),
+      worker(Portfolio.Scheduler, [])
+
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

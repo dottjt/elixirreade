@@ -61,7 +61,7 @@ defmodule Portfolio.Sitemaps do
           end
           
       end
-      
+      IO.inspect "sitemap created"
       ping()
       
       # notify search engines (currently Google and Bing) of the updated sitemap

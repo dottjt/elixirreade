@@ -9,7 +9,7 @@ use Mix.Config
 # General application configuration
 config :portfolio,
   ecto_repos: [Portfolio.Repo],
-  google_analytics_tracking_id: "UA-85083093-1"
+  google_analytics_tracking_id: "UA-85083093-1",
   website_alt_image: "images/cool/cool1.jpg"
 
 
