@@ -589,7 +589,7 @@
     left: -10px;
   }
   .category__outer .category__individual .category__header .category__display__name {
-    font-size: 2.9rem;
+    font-size: 3rem;
     top: 0.6rem;
   }
 
@@ -597,13 +597,14 @@
 
 @media screen and (max-width: 340px) {
   .category__outer .category__individual .category__header .category__description__background .category__description {
-    font-size: 0.9rem;
+    // font-size: 0.95rem;
+    font-size: 0.5rem;
     top: -2.8rem;
     left: -10px;
   }
 
   .category__outer .category__individual .category__header .category__display__name {
-    font-size: 2.6rem;
+    font-size: 2.75rem;
     top: 1rem;
   }
 }
