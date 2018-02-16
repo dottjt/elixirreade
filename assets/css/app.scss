@@ -61,7 +61,7 @@
       .category__description__background {
         position: absolute;
         top: 70px;
-        left: 40px; 
+        left: 34px; 
 
         height: 3rem;
         width: 88.3%;
@@ -92,7 +92,7 @@
           clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
           height: 100%;
 
-          left: -20px;
+          left: -15px;
           background: black;
 
           position: relative;
@@ -103,12 +103,13 @@
 
           // transform: skew(20deg);
           margin-left: 1rem;
-  
+          padding-left: 5px;
+
           font-family: 'Slabo 13px', serif;
           font-weight: 100;
   
           position: relative;
-          top: -4.8rem;
+          top: -4.6rem;
           font-size: 2rem;
         }  
       }
@@ -239,7 +240,7 @@
   background: white!important;
 
   .category__description {
-    // text-shadow: 3px 3px #9c3fff;
+    text-shadow: 3px 3px #9c3fff;
     color: black;
 
   }

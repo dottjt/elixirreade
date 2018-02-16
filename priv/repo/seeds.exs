@@ -32,7 +32,7 @@ User.changeset(%User{}, %{name: "Julius Reade", email: "julius.reade@gmail.com",
 programming = Ecto.Changeset.change(%Category{
     name: "programming",
     display_name: "Programming",
-    description: "That thing I'm passionate about.",
+    description: "Companies pay me to write code.",
 })
 
 writing = Ecto.Changeset.change(%Category{
@@ -246,7 +246,7 @@ elegantlyattached = Ecto.Changeset.change(%Project{
 
 brokenheartsandfracturedsmiles = Ecto.Changeset.change(%Project{
     name: "broken-hearts-and-fractured-smiles",
-    display_name: "壊れた Broken Hearts and Fractured Smiles",
+    display_name: "Broken Hearts and Fractured Smiles",
     excerpt: "tumblr. tumblr. tumblr.",
     description: ".",
     featured_image: "",
@@ -500,7 +500,7 @@ dontholdback = Ecto.Changeset.change(%Project{
 
 thefaptacularonehourspecial = Ecto.Changeset.change(%Project{
   name: "the-faptacular-one-hour-special",
-  display_name: "マスをかく The Faptacular One Hour Special",
+  display_name: "The Faptacular One Hour Special",
   excerpt: "radio. radio. radio.",
   description: "A comedy radio show I did with a friend.",
   featured_image: "",
