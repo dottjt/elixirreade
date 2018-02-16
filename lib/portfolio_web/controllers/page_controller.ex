@@ -8,7 +8,7 @@ defmodule PortfolioWeb.PageController do
     intro = Core.list_intro()
 
     meta_title = "Julius Reade"
-    meta_description = "Welcome to my website."
+    meta_description = "Software Developer, Melbourne, Australia. This is a personal portfolio of all the stuff I've made. Hopefully you will discover a broken man."
 
     render conn, "homepage.html", categories: categories, intro: intro, meta_description: meta_description, meta_title: meta_title
   end
