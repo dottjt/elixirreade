@@ -168,6 +168,7 @@
   justify-content: center;
   align-items: center;
   
+  text-decoration: none-webkit-;
   text-decoration: none;
   
 
@@ -260,6 +261,7 @@
   position: absolute;
   text-align: center;
   // text-decoration: underline #9c3fff;
+  // -webkit-text-decoration: underline #9c3fff;
   
   
   transform: skew(20deg) rotate(-69deg) translate3d( 0, 0, 0);
@@ -311,6 +313,7 @@
 
   .category__description {
     text-decoration: underline #9c3fff;
+    -webkit-text-decoration: underline #9c3fff;
   }
 }
 
@@ -354,16 +357,19 @@
     .project__display__name {
       color: white;
       // text-decoration: underline yellow;
+      // -webkit-text-decoration: underline yellow;
     }
 
     .project__description {
       text-decoration: underline cyan;
+      -webkit-text-decoration: underline cyan;
     }
 
   }
 
   .category__description {
     text-decoration: underline cyan;
+    -webkit-text-decoration: underline cyan;
   }
 }
 
@@ -395,11 +401,13 @@
     .project__display__name {
       color: white;
       // text-decoration: underline #ff33f5;
+      // -webkit-text-decoration: underline #ff33f5;
     }
 
 
     .project__description {
       text-decoration: underline yellow;
+      -webkit-text-decoration: underline yellow;
     }
 
 
@@ -407,6 +415,7 @@
 
   .category__description {
     text-decoration: underline yellow;
+      -webkit-text-decoration: underline yellow;
   }
   
 }
@@ -439,16 +448,19 @@
     .project__display__name {
       color: white;
       // text-decoration: underline #3afa14;      
+      // -webkit-text-decoration: underline #3afa14;      
     }
 
     .project__description {
       text-decoration: underline #ff33f5;
+      -webkit-text-decoration: underline #ff33f5;
     }
 
   }
 
   .category__description {
     text-decoration: underline #ff33f5;
+    -webkit-text-decoration: underline #ff33f5;
     
   }
 }
@@ -480,16 +492,19 @@
     .project__display__name {
       color: white;
       // text-decoration: underline #7C24FD;            
+      // -webkit-text-decoration: underline #7C24FD;            
     }
 
     .project__description {
       text-decoration: underline #3afa14;
+      -webkit-text-decoration: underline #3afa14;
     }
 
   }
 
   .category__description {
     text-decoration: underline #3afa14;
+    -webkit-text-decoration: underline #3afa14;
   }
 }
 
@@ -520,16 +535,19 @@
     .project__display__name {
       color: white;
       // text-decoration: underline cyan;
+      // -webkit-text-decoration: underline cyan;
     }
 
     .project__description {
       text-decoration: underline #7C24FD;
+      -webkit-text-decoration: underline #7C24FD;
     }
 
   }
 
   .category__description {
     text-decoration: underline #7C24FD;
+    -webkit-text-decoration: underline #7C24FD;
   }
   
 }
