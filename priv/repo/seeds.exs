@@ -32,7 +32,7 @@ User.changeset(%User{}, %{name: "Julius Reade", email: "julius.reade@gmail.com",
 programming = Ecto.Changeset.change(%Category{
     name: "programming",
     display_name: "Programming",
-    description: "What companies pay me to do.",
+    description: "That thing I'm passionate about.",
 })
 
 writing = Ecto.Changeset.change(%Category{
