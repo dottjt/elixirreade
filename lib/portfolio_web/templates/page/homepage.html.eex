@@ -1,59 +1,63 @@
-<div class="category__outer">
-  <!-- <div class="category__individual__top"></div> -->
-  <div class="category__individual">
-    <div class="category__header category__header__hero">
-        <h2 class="category__display__name">Julius Reade <span class="slash__degree">/////////</span></h2>
-
-        <div class="category__description__background category__description__background__hero">
-          <!-- <div class="category__description__background__two"></div>           -->
-          <h3 class="category__description">developer. melbourne. australia. </h3>    
-        </div>
-    </div>
-
-    <div class="project__outer project__outer__hero">
-      <div class="project__outer__colour project__outer__hero__colour"></div>
-      <%= Enum.map(@intro, fn(intro) -> %>
-          <div></div>
-          <a class="project__individual" href="<%= intro.link %>">                             
-              <div class="project__background__image"></div>
-              <h4 class="project__display__name"><%= intro.display_name %></h3>
-              <h5 class="project__description__hero"><%= intro.description %></h4>
-          </a>  
-      <% end) %>
-    </div>
-
-  </div> 
-</div>
-
-
-<div class="category__outer">
-  <%= Enum.map(@categories, fn(category) -> %>
+<div class="category__container">
+  <div class="category__outer">
     <!-- <div class="category__individual__top"></div> -->
     <div class="category__individual">
-      <div class="category__header category__header__<%= category.name %>">
-          <h2 class="category__display__name"><%= category.display_name %> <span class="slash__degree">/////////</span></h2>
+      <div class="category__header category__header__hero">
+          <h2 class="category__display__name">Julius Reade <span class="slash__degree">/////////</span></h2>
 
-          <div class="category__description__background">
-              <!-- <div class="category__description__background__two"></div>           -->
-              <h3 class="category__description"><%= category.description %></h3>    
+          <div class="category__description__background category__description__background__hero">
+            <div class="category__description__tip"></div>
+            <!-- <div class="category__description__background__two"></div>           -->
+            <h3 class="category__description">developer. melbourne. australia. </h3>    
           </div>
       </div>
 
-      <div class="project__outer project__outer__<%= category.name %>">
-        <div class="project__outer__colour project__outer__<%= category.name %>__colour"></div>
-        <%= Enum.sort_by(category.projects, &(&1.end_date))
-            |> Enum.reverse()      
-            |> Enum.map(fn (project) -> %>
-            
-              <a class="project__individual" href="<%= page_path(@conn, :project, category.name, project.name) %>">                             
-                  <div class="project__background__image"></div>
-                  <h4 class="project__display__name"><%= project.display_name %></h3>
-                  <h5 class="project__year"><%= project.start_date.year %> - <%= if(DateTime.utc_now.year === project.end_date.year) do "Present" else project.end_date.year end %></h4>
-                  <h5 class="project__description"><%= project.excerpt %></h4>
-              </a>
+      <div class="project__outer project__outer__hero">
+        <div class="project__outer__colour project__outer__hero__colour"></div>
+        <%= Enum.map(@intro, fn(intro) -> %>
+            <div></div>
+            <a class="project__individual" href="<%= intro.link %>">                             
+                <div class="project__background__image"></div>
+                <h4 class="project__display__name"><%= intro.display_name %></h3>
+                <h5 class="project__description__hero"><%= intro.description %></h4>
+            </a>  
         <% end) %>
       </div>
 
     </div> 
-  <% end) %>
+  </div>
+
+
+  <div class="category__outer">
+    <%= Enum.map(@categories, fn(category) -> %>
+      <!-- <div class="category__individual__top"></div> -->
+      <div class="category__individual">
+        <div class="category__header category__header__<%= category.name %>">
+            <h2 class="category__display__name"><%= category.display_name %> <span class="slash__degree">/////////</span></h2>
+
+            <div class="category__description__background">
+                <div class="category__description__tip"></div>          
+                <!-- <div class="category__description__background__two"></div>           -->
+                <h3 class="category__description"><%= category.description %></h3>    
+            </div>
+        </div>
+
+        <div class="project__outer project__outer__<%= category.name %>">
+          <div class="project__outer__colour project__outer__<%= category.name %>__colour"></div>
+          <%= Enum.sort_by(category.projects, &(&1.end_date))
+              |> Enum.reverse()      
+              |> Enum.map(fn (project) -> %>
+              
+                <a class="project__individual" href="<%= page_path(@conn, :project, category.name, project.name) %>">                             
+                    <div class="project__background__image"></div>
+                    <h4 class="project__display__name"><%= project.display_name %></h3>
+                    <h5 class="project__year"><%= project.start_date.year %> - <%= if(DateTime.utc_now.year === project.end_date.year) do "Present" else project.end_date.year end %></h4>
+                    <h5 class="project__description"><%= project.excerpt %></h4>
+                </a>
+          <% end) %>
+        </div>
+
+      </div> 
+    <% end) %>
+  </div>
 </div>
